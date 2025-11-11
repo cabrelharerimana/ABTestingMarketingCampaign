@@ -6,7 +6,7 @@ def Clean_data(df):
         df = df.drop_duplicates(subset='user_id')
     
     # clean group column
-    if 'group' in df.columns:
+    if 'test_group' in df.columns:
         df['test_group'] = df['test_group'].str.strip().str.upper()
 
     # convert conversion column to binary (1/0)
